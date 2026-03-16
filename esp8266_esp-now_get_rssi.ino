@@ -2,7 +2,7 @@
 #include <espnow.h>
 
 void OnDataRecv(uint8_t *mac, uint8_t *dat, uint8_t len) {
-  int rssi = (uint8_t)*(dat - 51) - 100; // Pointer offset always -51?, subtract 100 for dBm
+  int rssi = (uint8_t)*(dat - 51) - 100; // Pointer offset -51, subtract 100 for dBm
   Serial.print("RSSI: ");
   Serial.println(rssi);
 }
